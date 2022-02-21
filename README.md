@@ -15,7 +15,7 @@ Inside the scope of rtabmap node:
   * Only camera, set `Reg/Strategy` to 0.
   * only LIDAR, set `Reg/Strategy` to 1.
   * camera + LIDAR, set `Reg/Strategy` to 2.
-Set `Rtabmap/DetectionRate` to 3 to achieve an update ideally on every 0.333 second.
+* Set `Rtabmap/DetectionRate` to 3 to achieve an update ideally on every 0.333 second.
  
 Inside the scope of visualizer node `rtabmapviz` or `rviz`:
 * Set the above parameters, except the number of cameras in the visualizer node as well.
