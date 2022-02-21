@@ -20,6 +20,8 @@ Set `Rtabmap/DetectionRate` to 3 to achieve an update ideally on every 0.333 sec
 Inside the scope of visualizer node `rtabmapviz` or `rviz`:
 * Set the above parameters, except the number of cameras in the visualizer node as well.
 
+## Robot motion strategy during mapping
+The progress of the map must be viewed by the user while moving the robot. It is important to not continue moving robot too far without findinf a global loop closure. 
 # RTAB-Map map data processing from .db files
 
 ## Merging two maps
