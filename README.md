@@ -62,4 +62,4 @@ Loading a map dynamically, while another map is already in use is termed as *Map
 
 ## Mapping Pipeline
 
-The following flow diagram depicts the present mapping pipeline. 
+To be updated soon.
