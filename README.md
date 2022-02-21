@@ -18,7 +18,7 @@ Inside the scope of rtabmap node:
 * Set `Rtabmap/DetectionRate` to 3 to achieve an update ideally on every 0.333 second.
  
 Inside the scope of visualizer node `rtabmapviz` or `rviz`:
-* Set the above parameters, except the number of cameras in the visualizer node as well.
+* Set the above parameters, except the number of cameras and the registration strategy in the visualizer node as well.
 
 ## Robot motion strategy during mapping
 The progress of the map must be viewed by the user while moving the robot. It is important to not continue moving robot too far without finding a global loop closure. It will acccumulate unsurmountable error later on. Therefore, one needs to limit one way movement within 40-50m in a featureful environment for the goodness of the resulting map.
