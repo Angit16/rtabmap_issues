@@ -53,8 +53,8 @@ Another way to shrink or rebuild a `.db` file is to use [VACUUM](https://www.sql
 
 **Important:** While removing a group of nodes from a .db file, make sure to not remove a few initial nodes from that map until the occurance of the first global loop closure. Otherwise, the map origin may shift to a different one than the original map's origin. For the OLA mapping activiteis, the entire environment has been divided into many small and consecutively overlapping regions. A map for each region has been created independently. All these maps are then merged together using the map merging procedure explained above. Now, the global reference is created with reference to a map that contained the first global loop closure during the merging process. So, while generating smaller maps from a large merged map, one needs to ensure the following points.
 
-* The map containing the first global loop closure must be retained in the smaller map.
-* `rtabmap-reprocess` should be executed post 
+* The map containing the first global loop closure must be retained in the smaller map. Ideally, all the loop closures and their neighboring nodes should be retained in it.
+* `rtabmap-reprocess` should be executed post that (`./map_operate.sh`) to reduce the map size.
 
 ## Map switching
 
@@ -62,4 +62,4 @@ Loading a map dynamically, while another map is already in use is termed as *Map
 
 ## Mapping Pipeline
 
-To be updated soon.
+The following flow diagram depicts the present mapping pipeline. 
