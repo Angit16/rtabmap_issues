@@ -21,7 +21,7 @@ Inside the scope of visualizer node `rtabmapviz` or `rviz`:
 * Set the above parameters, except the number of cameras in the visualizer node as well.
 
 ## Robot motion strategy during mapping
-The progress of the map must be viewed by the user while moving the robot. It is important to not continue moving robot too far without findinf a global loop closure. 
+The progress of the map must be viewed by the user while moving the robot. It is important to not continue moving robot too far without finding a global loop closure. It will acccumulate unsurmountable error later on. Therefore, one needs to limit one way movement within 40-50m in a featureful environment for the goodness of the resulting map.
 # RTAB-Map map data processing from .db files
 
 ## Merging two maps
@@ -39,7 +39,7 @@ The progress of the map must be viewed by the user while moving the robot. It is
 
  To remove a portion from an existing map,
  run `map_operate.sh`
- Enter the map file name by passing `$map_name` as an argument. In the file  `map_operate.sh`, nodes removal starts from `from_id`. Similarly, `to_id` refers to the stopping node ID to be removed. Therefore one has to specify the desired node IDs to the respecctive fields.
+ Enter the map file name by passing `$map_name` as an argument. In the file  `map_operate.sh`, nodes removal starts from `from_id`. Similarly, `to_id` refers to the stopping node ID to be removed. Therefore one has to specify the desired node IDs to the respecctive fields. 
 
 *Nodes removal Strategy:*
 
